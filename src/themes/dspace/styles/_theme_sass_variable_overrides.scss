@@ -70,7 +70,7 @@ $yiq-contrasted-threshold: 170;
 
 $body-color: #343a40;       // As Bootstrap $gray-800
 
-$link-color: #1e6f90;       // Blue green, as DSpace $info
+$link-color: #1F7293;       // White, for icon  DSpace $info
 $link-decoration: none;
 $link-hover-color: darken($link-color, 15%);
 $link-hover-decoration: underline;
@@ -84,7 +84,10 @@ $navbar-dark-color: #fff;
 /*** CUSTOM DSPACE VARIABLES ***/
 
 $ds-home-news-link-color: #D2FC93;
-$ds-header-navbar-border-bottom-color: #92c642;
+$ds-header-navbar-border-bottom-color: #eca43c;
 
 $ds-breadcrumb-link-color: #154E66 !default;
 $ds-breadcrumb-link-active-color: #040D11 !default;
+$ds-header-icon-color: #fff;  // Header icon default color 
+$ds-header-icon-color-hover: #ffbf00;
+$ds-navbar-link-color-hover: #ffbf00; // Override navbar link hover color

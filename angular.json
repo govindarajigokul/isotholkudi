@@ -30,7 +30,8 @@
               "lodash",
               "jwt-decode",
               "uuid",
-              "zone.js"
+              "zone.js",
+              "date-fns-tz"
             ],
             "outputPath": "dist/browser",
             "index": "src/index.html",

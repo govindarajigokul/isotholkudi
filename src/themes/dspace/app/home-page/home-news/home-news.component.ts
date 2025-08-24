@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { HomeNewsComponent as BaseComponent } from '../../../../../app/home-page/home-news/home-news.component';
 
 @Component({
@@ -9,8 +8,18 @@ import { HomeNewsComponent as BaseComponent } from '../../../../../app/home-page
   standalone: true,
 })
 
-/**
- * Component to render the news section on the home page
- */
-export class HomeNewsComponent extends BaseComponent {}
+export class HomeNewsComponent extends BaseComponent {
+  zoom: number = 1;
 
+  zoomIn() {
+    if (this.zoom < 3) { // Maximum zoom level
+      this.zoom += 0.1;
+    }
+  }
+
+  zoomOut() {
+    if (this.zoom > 0.2) { // Minimum zoom level
+      this.zoom -= 0.1;
+    }
+  }
+}

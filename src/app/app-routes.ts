@@ -257,6 +257,18 @@ export const APP_ROUTES: Route[] = [
           .then((m) => m.ROUTES),
         canActivate: [authenticatedGuard],
       },
+      // Custom Tholkudi routes
+      {
+        path: 'about-us',
+        redirectTo: '/info/about',
+        pathMatch: 'full',
+      },
+      {
+        path: 'tribal_lg',
+        loadComponent: () => import('./tribal-languages/themed-tribal-languages.component').then(m => m.ThemedTribalLanguagesComponent),
+        canActivate: [endUserAgreementCurrentUserGuard],
+        data: { title: 'Tribal Languages', breadcrumbKey: 'tribal.languages' },
+      },
       { path: '**', pathMatch: 'full', component: ThemedPageNotFoundComponent },
     ],
   },
